@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event list</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="mainDiv">
+        <h1>Event list</h1>
+        <p>events list</p>
+
+    
+        <div id="counters" style="margin: 10px 0; color: #333;">
+            <span>Total: <strong id="total-count">0</strong></span> | 
+            <span>Upcoming: <strong id="upcoming-count">0</strong></span> | 
+            <span>Attended: <strong id="attended-count">0</strong></span>
+        </div>
+
+        
+        <form id="event-form">
+            <input type="text" id="event-title" placeholder="Event Title" required>
+            <input type="date" id="event-date" placeholder="Date" required>
+            <select id="event-category">
+                <option value="Technology">Technology</option>
+                <option value="Business">Business</option>
+                <option value="Education">Education</option>
+            </select>
+            <input type="text" id="event-location" placeholder="Location" required>
+            <button type="submit">Add Event</button>
+        </form>
+
+        
+        <div class="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="Upcoming">Upcoming</button>
+            <button data-filter="Past">Past</button>
+        </div>
+
+        
+        <div id="events-container"></div>
+
+        
+        <p id="empty-message" style="display: none;">No events found.</p>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
